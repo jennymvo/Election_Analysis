@@ -60,7 +60,7 @@ Another way this script can be modified is by looking for the losers of the elec
 ```python
 lowestCounty = min(countyVotes.values())
 LoserCounty = [k for k, v in countyVotes.items() if v==lowestCounty]
-print(f" Loser County: {LoserCounty} with {min(countyVotes.values())} votes")
+print(f" The county with the lowest voter turnout is {LoserCounty} with only {min(countyVotes.values())} votes")
 ```
 
 This can also be modified to find the loser candidate:
@@ -68,5 +68,5 @@ This can also be modified to find the loser candidate:
 ```python
 lowestCandidate = min(candidate_votes.values())
 LoserCandidate = [k for k, v in candidate_votes.items() if v==lowestCandidate]
-print(f" Loser Candidate: {LoserCandidate} with {min(candidate_votes.values())} votes")
+print(f" The loser candidate is {LoserCandidate} with only {min(candidate_votes.values())} votes")
 ```
