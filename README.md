@@ -27,19 +27,46 @@ The purpose of this project is to learn how to use python to analyze election da
         - Then begin tracking the candidate voter count
     - Add the county to the county list
         - Then begin tracking the candidate voter count  
-    - Save the results of the total votes to the text file and print to the terminal
-    ![Total voting Result](https://github.com/jennymvo/Election_Analysis/blob/main/images/Screen%20Shot%202022-09-28%20at%2011.43.42%20AM.png?raw=true)
-- Create a for-loop for finding the county vote count, and find the percetage of the votes for each county.
+    - Save the results of the total votes to the text file and print to the terminal. 
+    - The output should look like this:
+![Total voting Result](https://github.com/jennymvo/Election_Analysis/blob/main/images/Screen%20Shot%202022-09-28%20at%2011.43.42%20AM.png?raw=true)
+- Create a for-loop for finding the county vote count, and find the percentage of the votes for each county.
 - Find the winning county by finding the county with the largest vote count
     - Print the results to the terminal and save results into the text file
-    ![County Votes ]
+    - The output should look like this:
+![County Votes](https://github.com/jennymvo/Election_Analysis/blob/main/images/county_votes.png?raw=true)
+- Find the largest county turnout by writing an if statement for the county with the highest vote count and the highest voting percentage.
+- The output should look like this:
+![Largest County Turnout](https://github.com/jennymvo/Election_Analysis/blob/main/images/largest_county_turnout.png?raw=true)
 - Retrieve the vote count and the percentage of candidate votes.
     - Print the results for each candidate and save the results to the text file.
+- The output should look like this:
+![Results of the voting distribution for candidates](https://github.com/jennymvo/Election_Analysis/blob/main/images/candidates.png?raw=true)
 - Find the winning candidate by finding the candidate with the highest number of votes and highest percentage of votes.
     - Print the results of the winning candidate and save to the text file.
-
-![Results of the ]
+- The output should look like this:
+![Winning Candidate Results](https://github.com/jennymvo/Election_Analysis/blob/main/images/winningcandidate.png?raw=true)
 
 ## Election Audit Summary
 
 ###### There is a statement to the election commission that explores how this script can be used for any election, with two examples for modifying the script
+
+This script automates the analysis of the county and candidate elections from an input file containing all the data. 
+
+This script can be used for any election, as long as the input file as long as each row represents one vote, and the information is organized with the information in their respective columns. Depending on where the candidate and area of votes are organized on the sheet, the column data that is being extracted can be modified easily from rows 50 and 53 in the script by changing it to the row of interest. 
+
+Another way this script can be modified is by looking for the losers of the election to be able to publically shame them by adding lines like so:
+
+```python
+lowestCounty = min(countyVotes.values())
+LoserCounty = [k for k, v in countyVotes.items() if v==lowestCounty]
+print(f" Loser County: {LoserCounty} with {min(countyVotes.values())} votes")
+```
+
+This can also be modified to find the loser candidate:
+
+```python
+lowestCandidate = min(candidate_votes.values())
+LoserCandidate = [k for k, v in candidate_votes.items() if v==lowestCandidate]
+print(f" Loser Candidate: {LoserCandidate} with {min(candidate_votes.values())} votes")
+```
