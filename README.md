@@ -26,20 +26,19 @@ The purpose of this project is to learn how to use python to analyze election da
     - Add the candidate name to the candidate list
         - Then begin tracking the candidate voter count
     - Add the county to the county list
-        -then begin tracking the candidate voter count  
-    - Save the results of the county votes to the text file.
+        - Then begin tracking the candidate voter count  
+    - Save the results of the total votes to the text file and print to the terminal
+    ![Total voting Result](https://github.com/jennymvo/Election_Analysis/blob/main/images/Screen%20Shot%202022-09-28%20at%2011.43.42%20AM.png?raw=true)
 - Create a for-loop for finding the county vote count, and find the percetage of the votes for each county.
 - Find the winning county by finding the county with the largest vote count
     - Print the results to the terminal and save results into the text file
+    ![County Votes ]
 - Retrieve the vote count and the percentage of candidate votes.
     - Print the results for each candidate and save the results to the text file.
 - Find the winning candidate by finding the candidate with the highest number of votes and highest percentage of votes.
     - Print the results of the winning candidate and save to the text file.
 
-
-### County Votes and Largest County Turnout
-
-### Candidate Results and winner of the election
+![Results of the ]
 
 ## Election Audit Summary
 
